@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "uat",
+      "script": "dist/main.js",
+      "instances": "max",
+      "watch": false,
+      "env": {
+        "PORT": "4444"
+      }
+    }
+  ]
+}

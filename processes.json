@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "base-project",
+      "script": "dist/main.js",
+      "instances": "max",
+      "watch": false
+    }
+  ]
+}

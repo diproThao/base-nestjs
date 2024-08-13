@@ -1,0 +1,39 @@
+import { Controller } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
+import { Crud, CrudController } from '@nestjsx/crud';
+
+import { Auth } from '../../decorators';
+import { {{pascalCase name}} } from '../../entities';
+import { {{pascalCase name}}Service } from './{{dashCase name}}.service';
+
+@Auth({ checkRole: true })
+@Crud({
+  model: {
+    type: {{pascalCase name}},
+  },
+  query: {
+    alwaysPaginate: true,
+    softDelete: true,
+/*    join: {
+      colorCombinations: { eager: false },
+    }, */
+  },
+  routes: {
+    only: [
+      'getOneBase',
+      'getManyBase',
+      'createOneBase',
+      'updateOneBase',
+      'deleteOneBase',
+    ],
+    updateOneBase: {
+      allowParamsOverride: true,
+      returnShallow: true,
+    },
+  },
+})
+@ApiTags('admin/{{plural (dashCase name)}}')
+@Controller('admin/{{plural (dashCase name)}}')
+export class Admin{{pascalCase name}}Controller implements CrudController<{{pascalCase name}}> {
+  constructor(public service: {{pascalCase name}}Service) {}
+}

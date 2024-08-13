@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "dev",
+      "script": "dist/main.js",
+      "instances": "max",
+      "watch": false,
+      "env": {
+        "PORT": "3333"
+      }
+    }
+  ]
+}

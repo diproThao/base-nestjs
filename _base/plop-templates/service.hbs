@@ -1,0 +1,12 @@
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { TypeOrmCrudService } from '@nestjsx/crud-typeorm';
+
+import { {{pascalCase name}} } from '../../entities';
+
+@Injectable()
+export class {{pascalCase name}}Service extends TypeOrmCrudService<{{pascalCase name}}> {
+  constructor(@InjectRepository({{pascalCase name}}) repo) {
+    super(repo);
+  }
+}

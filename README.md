@@ -45,6 +45,19 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Migration
+
+```bash
+# Create a migration
+$ npm run migrate:create <name>
+
+# Run the migration
+$ npm run migrate:up
+
+# Down the migration
+$ npm run migrate:down
+```
+
 ## Test
 
 ```bash

@@ -4,3 +4,11 @@ export enum RoleType {
   CUSTOMER = 'CUSTOMER',
   PARTNER = 'PARTNER',
 }
+
+export enum EBullQueue {
+  MAIL = 'Q::mail',
+}
+
+export enum EBullJob {
+  SEND_EMAIL = 'sendMail',
+}

@@ -17,3 +17,7 @@ export default () => ({
     region: process.env.AWS_REGION,
   },
 });
+
+export function hasShowDebugInfo() {
+  return ['development', 'staging'].includes(process.env.NODE_ENV);
+}

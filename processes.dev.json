@@ -1,13 +1,25 @@
 {
   "apps": [
     {
-      "name": "dev",
-      "script": "dist/main.js",
-      "instances": "max",
-      "watch": false,
+      "name": "ansin-dev-api",
+      "script": "dist/src/main.js",
+      "instances": 1,
+      "exec_mode": "fork",
       "env": {
-        "PORT": "3333"
+        "PORT": 3300
       }
+    },
+    {
+      "name": "ansin-dev-worker",
+      "script": "dist/src/bull/worker.js",
+      "instances": 1,
+      "exec_mode": "fork"
+    },
+    {
+      "name": "ansin-dev-schedule",
+      "script": "dist/src/schedule/schedule.js",
+      "instances": 1,
+      "exec_mode": "fork"
     }
   ]
 }
